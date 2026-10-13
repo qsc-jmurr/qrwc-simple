@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/*
+ * Q-SYS Horizon theme.
+ * Components only use these semantic tokens (bg-surface, text-ink, bg-accent…),
+ * so restyling the app means changing values here, not editing components.
+ */
+:root {
+  --bg: #0b0b0c;
+  --surface: #161618;
+  --surface-2: #1f1f22;
+  --line: rgb(255 255 255 / 0.09);
+  --ink: #f4f4f5;
+  --ink-muted: rgb(244 244 245 / 0.55);
+  --accent: #0166ff; /* Q-SYS blue */
+  --accent-2: #00d4ff;
+  --danger: #ee0153; /* Q-SYS red */
+  --ok: #26db18; /* Q-SYS green */
+  --warn: #f3c623; /* Q-SYS yellow */
+  --radius: 16px;
+  color-scheme: dark;
+}
+
+/* Expose the tokens to Tailwind classes */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --radius-panel: var(--radius);
+  --font-sans: var(--sohne), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--sohne-breit), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--sohne-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
